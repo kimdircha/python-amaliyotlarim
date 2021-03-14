@@ -1,0 +1,2 @@
+# Yangi-kimdir
+Sinovga
