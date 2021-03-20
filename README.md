@@ -1,2 +1,2 @@
-# Yangi-kimdir
-Sinovga
+# Python
+Pythondagi ilk mustaqil dasturlarim
