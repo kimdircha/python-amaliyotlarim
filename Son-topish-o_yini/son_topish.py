@@ -3,6 +3,35 @@
     17.03.2021"""
 
 import random as rdm
+# < soz topish from button / Games.game statedan -> Games.findBotsNumber
+# ? config.FINDNUMBER[message.from_user.id] = {}
+
+# >\"Son topish\" o'yinini o'ynaymiz.
+# >\nMen 0 va 100 oralig'idan bir son o'yladim. Uni topishga urinib ko'ring:
+
+# < number
+
+# ? try b = int msg.text
+# ? except > qoida buzildi, yutdim / -> Games.game
+# ? else config.FINDNUMBER[message.from_user.id]['n'] = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 print("\nAssalomu aleykum. Keling, \"Son topish\" o'yinini o'ynaymiz.")
 while True:
     playersGuess=int(input("\nMen 0 va 100 oralig'idan bir son o'yladim. Uni topishga urinib ko'ring:\n>>> "))
