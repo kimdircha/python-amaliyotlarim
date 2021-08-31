@@ -2,24 +2,19 @@
     Muallif: Suhayl Qodirov
     18.03.2021 """
 
-from uzwords import words
+from uzwords_latin import words
 import random as rdm
 
 def harf_tekshir(harf, harflar, ishlatilgan, yechim):
     if harf in harflar:
         print("\nTo'g'ri\n\nSiz ishlatgan harflar: ", end='')
-        for ishlatilgan_harf in ishlatilgan:
-            print(ishlatilgan_harf, end='')
-        print()
-        for kv in yechim:
-            print(kv, end=' ')
     else:
         print("\nNoto'g'ri\n\nSiz ishlatgan harflar: ", end='')
-        for ishlatilgan_harf in ishlatilgan:
-            print(ishlatilgan_harf, end='')
-        print()
-        for kv in yechim:
-            print(kv, end=' ')  
+    for ishlatilgan_harf in ishlatilgan:
+        print(ishlatilgan_harf, end='')
+    print()
+    for kv in yechim:
+        print(kv, end=' ')  
         
 def kv_och(yechim):
     for tek in range(len(harflar)):
@@ -28,21 +23,16 @@ def kv_och(yechim):
     return yechim
 
 jumboq=rdm.choice(words)
-while '-' in jumboq or ' ' in jumboq:
-    jumboq=rdm.choice(words)
 
 harflar = []
+yechim = []
+ishlatilgan = []
 for harf in jumboq:
     harflar.append(harf)
+    yechim.append('□')
     
 print(f"Men {len(harflar)} ta harfdan iborat bir so'z o'yladim.")
 
-yechim = []
-ishlatilgan = []
-
-for uzunlik in harflar:
-    yechim.append('□')
-    
 for kv in yechim:
     print(kv, end=' ')
 
