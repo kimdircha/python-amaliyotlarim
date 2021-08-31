@@ -3,33 +3,6 @@
     17.03.2021"""
 
 import random as rdm
-# < soz topish from button / Games.game statedan -> Games.findBotsNumber
-# ? config.FINDNUMBER[message.from_user.id] = {}
-
-# >\"Son topish\" o'yinini o'ynaymiz.
-# >\nMen 0 va 100 oralig'idan bir son o'yladim. Uni topishga urinib ko'ring:
-# ? config.FINDNUMBER[message.from_user.id]['playersAttemps'] = 0
-# ? config.FINDNUMBER[message.from_user.id]['computersChoise'] = rdm.randint(0,100)
-# ? computersAttemps=0
-# ? lowerLimit=0
-# ? upperLimit=100
-# ? computersGuess=rdm.randint(lowerLimit,upperLimit)
-
-# < number
-
-# ? try config.FINDNUMBER[message.from_user.id]['playersGuess'] = int msg.text
-# ? except > qoida buzildi, yutdim / -> Games.game
-# ? else 
-# ? config.FINDNUMBER[message.from_user.id]['playersAttemps'] += 1
-# ? if computersChoise==playersGuess:
-#     > f"To'g'ri, men o'ylagan son {computersChoise} edi."
-#     ? -> Games.findPlayerssNumber
-#     > f"Qoyil {playersAttemps} ta urinishda topdingiz. "
-#                f"Endi siz son o'ylang va 'Enter'ni bosing. Men uni topishga urinib ko'raman."
-# ? elif computersChoise<playersGuess:
-#     > f"O'ylagan sonim {playersGuess}dan kichik.\n>>> "
-# ? else:
-#     f"O'ylagan sonim {playersGuess}dan katta.\n>>> "
 
 # < boshlash from buttton /state = Games.findPlayerssNumber
 
