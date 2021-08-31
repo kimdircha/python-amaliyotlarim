@@ -4,40 +4,6 @@
 
 import random as rdm
 
-# < boshlash from buttton /state = Games.findPlayerssNumber
-
-# ? computersAttemps+=1
-# > f"Siz o'ylagan son {computersGuess}mi?\n"
-#         	          f"\nAgar siz o'ylagan son {computersGuess}dan katta bo'lsa + deb, kichik bo'lsa - deb, to'g'ri topgan bo'lsam ha deb yozing >>> "
-#     with inline buttons
-
-# if call.data=='+':
-#     lowerLimit=computersGuess+1
-#     if lowerLimit>upperLimit:
-#         > "\nYolg'on gapirdingiz! O'yin qoidasi buzildi."
-#         computersAttemps=0
-#         -> Games.game
-#     computersGuess=rdm.randint(lowerLimit,upperLimit)
-# elif call.data=='-':
-#     upperLimit=computersGuess-1
-#     if lowerLimit>upperLimit:
-#         > "\nYolg'on gapirdingiz! O'yin qoidasi buzildi."
-#         computersAttemps=0
-#         -> Games.game
-#     computersGuess=rdm.randint(lowerLimit,upperLimit)
-# else:
-#     > f"Men {computersAttemps} ta urinishda topdim"
-#     -> Games.game
-
-# if playersAttemps>computersAttemps:
-#     > "Men g'olibman!"
-# elif playersAttemps<computersAttemps:
-#     > "Siz g'olibsiz!"
-# else:
-#     > "Durrang!"
-
-# > "O'yin tugadi!"
-
 print("\nAssalomu aleykum. Keling, \"Son topish\" o'yinini o'ynaymiz.")
 while True:
     playersGuess=int(input("\nMen 0 va 100 oralig'idan bir son o'yladim. Uni topishga urinib ko'ring:\n>>> "))
