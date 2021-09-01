@@ -2,49 +2,49 @@
     Muallif: Suhayl Qodirov
     18.03.2021 """
 
-from uzwords_latin import words
+from uzwords import words
 import random as rdm
 
-def harf_tekshir(harf, harflar, ishlatilgan, yechim):
-    if harf in harflar:
+def check_letter(letter, letters, used, solution):
+    if letter in letters:
         print("\nTo'g'ri\n\nSiz ishlatgan harflar: ", end='')
     else:
         print("\nNoto'g'ri\n\nSiz ishlatgan harflar: ", end='')
-    for ishlatilgan_harf in ishlatilgan:
-        print(ishlatilgan_harf, end='')
+    for used_letter in used:
+        print(used_letter, end='')
     print()
-    for kv in yechim:
-        print(kv, end=' ')  
+    for item in solution:
+        print(item, end=' ')  
         
-def kv_och(yechim):
-    for tek in range(len(harflar)):
-        if harflar[tek] == harf:
-            yechim[tek] = harf.upper()
-    return yechim
+def open_found(solution, letter, letters):
+    for index in range(len(letters)):
+        if letters[index] == letter:
+            solution[index] = letter.upper()
+    return solution
 
-jumboq=rdm.choice(words)
+puzzle=rdm.choice(words)
 
-harflar = []
-yechim = []
-ishlatilgan = []
-for harf in jumboq:
-    harflar.append(harf)
-    yechim.append('□')
+letters = []
+solution = []
+used = []
+for letter in puzzle:
+    letters.append(letter)
+    solution.append('□')
     
-print(f"Men {len(harflar)} ta harfdan iborat bir so'z o'yladim.")
+print(f"Men {len(letters)} ta harfdan iborat bir so'z o'yladim.")
 
-for kv in yechim:
-    print(kv, end=' ')
+for item in solution:
+    print(item, end=' ')
 
-while '□' in yechim:
-    harf = input("\nTaxmin qiling: ")
-    if harf.upper() in ishlatilgan:
-        print(f"\n{harf.upper()} harfi ishlatilgan.", end='')
+while '□' in solution:
+    letter = input("\nTaxmin qiling: ")
+    if letter.upper() in used:
+        print(f"\n{letter.upper()} harfi ishlatilgan.", end='')
     else:
-        ishlatilgan.append(harf.upper())
-        yechim = kv_och(yechim[:])
-        harf_tekshir(harf, harflar[:], ishlatilgan[:], yechim[:])
+        used.append(letter.upper())
+        solution = open_found(solution[:], letter, letters[:])
+        check_letter(letter, letters[:], used[:], solution[:])
 
 print(f"\n\n"
-      f"Siz {len(ishlatilgan)} ta urinishda so'zni topdingiz.")
+      f"Siz {len(used)} ta urinishda so'zni topdingiz.")
 input()
